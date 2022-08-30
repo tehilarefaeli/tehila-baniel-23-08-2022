@@ -36,6 +36,7 @@ export default function CurrentLocationConditions({
 
     return res;
   };
+  const img =( require(`../../assets/${currentConditions.WeatherIcon||'1'}.png`))
   
   return (
     currentConditions ? (
@@ -68,7 +69,7 @@ export default function CurrentLocationConditions({
           >
             
             <img
-            src={( require(`../../assets/${currentConditions.WeatherIcon||'1'}.png`)) }
+            src={img}
               alt="current icon"
               style={{ verticalAlign: 'middle' }}
               className="weatherIcon"
