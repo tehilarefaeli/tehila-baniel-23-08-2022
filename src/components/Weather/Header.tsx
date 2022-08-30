@@ -22,7 +22,6 @@ function Header() {
            >
              Weather
            </Typography>
-          <Typography >
              <IconButton  color="inherit" 
               onClick={()=>{navigate.push('/home')}}
               >
@@ -34,7 +33,6 @@ function Header() {
              >
                  <FavoriteIcon  /> 
              </IconButton>
-             </Typography>
              <TempType/>
          </Toolbar>
        </AppBar>

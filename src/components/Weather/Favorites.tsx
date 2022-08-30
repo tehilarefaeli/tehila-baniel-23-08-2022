@@ -52,7 +52,7 @@ function FavoriteItem({ item, isMetric,setSelectedCity }:any) {
               <div>
                 <img
                   
-                  src={require (`../../assets/${conditions.WeatherIcon || '1'}.png`)}
+                  src={require (`../../assets/${conditions.WeatherIcon || ''}.png`)}
                   alt="current icon"
                   style={{ verticalAlign: 'middle' }}
                   className="weatherIcon"
@@ -76,7 +76,7 @@ function FavoriteItem({ item, isMetric,setSelectedCity }:any) {
   
     function Favorites() {
   
-    const favorites:any = useSelector(selectSetFavorites);
+    const favorites = useSelector(selectSetFavorites);
     const isMetric = useSelector(selectIsMetric);
     const dispatch = useDispatch();
     const classes = useStyles();

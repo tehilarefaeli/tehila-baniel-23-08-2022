@@ -13,10 +13,10 @@ import {GetLocationList} from "../../store/locationList/types"
 function SerchInput( {onSelection}:any ) {
 
     const pending = useSelector(selectPending);   
-    const error:any = useSelector(selectError);
+    const error = useSelector(selectError);
     const dispatch:Dispatch <GetLocationList> = useDispatch();
     const getLocationsListData = (userInput:string) => dispatch(getLocationList(userInput));
-    const locationsList:any = useSelector(selectLocations); 
+    const locationsList= useSelector(selectLocations); 
   
   
   
@@ -34,7 +34,7 @@ function SerchInput( {onSelection}:any ) {
     };
   
 
-    const onSelect = (e:any, input:any) => {
+    const onSelect = (e:any, input:string) => {
       
       if (input !== '') {
         const location = locationsList?.find(
@@ -52,7 +52,6 @@ function SerchInput( {onSelection}:any ) {
           className="country"
           id="standard-error-helper-text"
           style={{ width: 348 }}
-          //options={["kjk","jiji"]}
           options={Object.values(locationsList).map((city:any) => city.LocalizedName)}
           onChange={(e, option) => {
               onSelect(e, option);

@@ -48,7 +48,7 @@ function LocationDailyWeather({ dailyWeather}:any) {
       <Grid container className="forecastContainer">
       <Grid item xs={12}>
         <Typography variant="h3" gutterBottom>
-          Daily Forecast
+          Daily Weather
         </Typography>
         <Typography variant="h5" gutterBottom>
           {dailyWeather.Headline?.Text}
@@ -65,7 +65,7 @@ function LocationDailyWeather({ dailyWeather}:any) {
           <Card className={classes.root}>
               <CardMedia
                 className={classes.media}
-                image={require(`../../assets/${day.Day.Icon || '1'}.png`)}
+                image={`../../assets/${day.Day.Icon || '1'}.png`}
                 title={day.Day.IconPhrase}
               >
                 <Typography

@@ -16,7 +16,7 @@ const checkSavedInFavorites = (favorites:any, location:any) => {
   
   export default function FavoriteButton({ selectedLocation }:any) {
 
-    const favoritesList:any = useSelector(selectSetFavorites);
+    const favoritesList= useSelector(selectSetFavorites);
 
     const [isFavorite, setIsFavorite] = useState(checkSavedInFavorites(favoritesList, selectedLocation));
 

@@ -15,10 +15,10 @@ import{ selectIsMetric} from "../../store/temp/selectors";
 import '../../scss/searchInput.css';
 
 function DailyWeather(){
-    const location:any = useSelector(selectLocation);
-    const locationKey:any = useSelector(selectLocationKey);
-    const dailyWeather:any = useSelector(selectDailyWeather);
-    const isMetric:any =useSelector(selectIsMetric);
+    const location = useSelector(selectLocation);
+    const locationKey= useSelector(selectLocationKey);
+    const dailyWeather= useSelector(selectDailyWeather);
+    const isMetric =useSelector(selectIsMetric);
     const dispatch:Dispatch<any> = useDispatch(); 
   
     useEffect(() => {
