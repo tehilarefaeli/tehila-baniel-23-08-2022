@@ -43,9 +43,7 @@ function LocationDailyWeather({ dailyWeather}:any) {
       date = new Date(date);
       return days[date.getDay()];
     };
-    // const findWeatherIcon = (iconKey:number) =>
-    //    require(`../../assets/1.png`);
-  
+
     return (dailyWeather ? (
       <Grid container className="forecastContainer">
       <Grid item xs={12}>
@@ -67,7 +65,7 @@ function LocationDailyWeather({ dailyWeather}:any) {
           <Card className={classes.root}>
               <CardMedia
                 className={classes.media}
-                //image={require(`../../assets/${day.Day.Icon || '6'}.png`)}
+                image={require(`../../assets/${day.Day.Icon || '1'}.png`)}
                 title={day.Day.IconPhrase}
               >
                 <Typography

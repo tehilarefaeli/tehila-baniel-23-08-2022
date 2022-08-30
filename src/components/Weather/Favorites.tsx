@@ -42,9 +42,6 @@ function FavoriteItem({ item, isMetric,setSelectedCity }:any) {
         });
     }, [item.key || item.locationKey]);
     
-    
-    const findWeatherIcon = (iconKey:string) =>
-      require(`../../assets/${iconKey || '9'}.png`); 
     return (
       <Card onClick={()=>setSelectedCity(item)}>
           <CardContent>
@@ -54,8 +51,8 @@ function FavoriteItem({ item, isMetric,setSelectedCity }:any) {
             {conditions ? (
               <div>
                 <img
-                  //src={img2}
-                  src={findWeatherIcon(conditions.WeatherIcon)}
+                  
+                  src={require (`../../assets/${conditions.WeatherIcon || '1'}.png`)}
                   alt="current icon"
                   style={{ verticalAlign: 'middle' }}
                   className="weatherIcon"

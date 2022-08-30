@@ -14,9 +14,7 @@ import LocationDailyWeather from "./LocationDailyWeather";
 import{ selectIsMetric} from "../../store/temp/selectors";
 import '../../scss/searchInput.css';
 
-
 function DailyWeather(){
-    const pending: any  = useSelector(selectPending);
     const location:any = useSelector(selectLocation);
     const locationKey:any = useSelector(selectLocationKey);
     const dailyWeather:any = useSelector(selectDailyWeather);

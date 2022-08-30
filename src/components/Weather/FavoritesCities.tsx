@@ -30,7 +30,7 @@ const checkSavedInFavorites = (favorites:any, location:any) => {
 
     const handleFavorites = () => {
       let favoritesArray = [...favoritesList];
-      if(!isFavorite)
+      if(isFavorite)
          favoritesArray = favoritesArray.filter(item => item.key || item.locationKey !== selectedLocation.key || selectedLocation.locationKey);
       else
          favoritesArray.push(selectedLocation);  
@@ -42,7 +42,7 @@ const checkSavedInFavorites = (favorites:any, location:any) => {
       <div>
         Add to favorites
         <IconButton aria-label="favorites" onClick={handleFavorites}>
-          {isFavorite ? 
+          {!isFavorite ? 
             <FavoriteBorderIcon fontSize="large" htmlColor="" style={{verticalAlign:'middle'}}/> :
             <FavoriteIcon fontSize="large" htmlColor="#7DD5y6" style={{verticalAlign:'middle'}}/> 
           }

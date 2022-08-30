@@ -5,7 +5,6 @@ import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import FavoriteButton from './FavoritesCities';
-import img2 from '../../assets/img2.png';
 
 
 const useStyles = makeStyles({
@@ -29,10 +28,6 @@ export default function CurrentLocationConditions({
 }:any) {
   const classes = useStyles();
 
-  // const findIcon = (iconKey:string) =>{
-  //   const IconNumber= iconKey|| '6';
-  //   return String( require(`../../assets/images/${IconNumber}.png`)) 
-  // }
   const showFormatedData = (date:Date) => {
     let res = '';
     const currentDate = new Date(date);
@@ -73,7 +68,7 @@ export default function CurrentLocationConditions({
           >
             
             <img
-            src={img2}
+            src={( require(`../../assets/${currentConditions.WeatherIcon||'1'}.png`)) }
               alt="current icon"
               style={{ verticalAlign: 'middle' }}
               className="weatherIcon"
@@ -83,7 +78,7 @@ export default function CurrentLocationConditions({
           <Typography variant="h1" component="h1" display="inline">
             
             {isMetric? currentConditions.Temperature?.Metric?.Value
-              : currentConditions.Temperature.Imperial.Value}
+              : currentConditions.Temperature?.Imperial?.Value}
           </Typography>
           <Typography variant="h4" display="inline">
             {isMetric ? ' C°' : ' F°'}
