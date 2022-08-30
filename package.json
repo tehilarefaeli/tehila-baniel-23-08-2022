@@ -6,6 +6,9 @@
     "@store": "dist/store"
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.4",
+    "@material-ui/icons": "^4.11.3",
+    "@material-ui/lab": "^4.0.0-alpha.61",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
@@ -20,11 +23,13 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-redux": "^7.2.3",
+    "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "redux": "^4.0.5",
     "redux-saga": "^1.1.3",
     "reselect": "^4.0.0",
     "typescript": "^4.1.2",
+    "typescript-react-intl": "^0.4.1",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
@@ -52,6 +57,8 @@
     ]
   },
   "devDependencies": {
+    "@types/react-intl": "^3.0.0",
+    "@types/react-router-dom": "^5.3.3",
     "@types/redux-logger": "^3.0.8",
     "module-alias": "^2.2.2",
     "redux-logger": "^3.0.6",
